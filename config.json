@@ -1,0 +1,15 @@
+{
+  "base_url": "https://grist.numerique.gouv.fr/o/dranepaca",
+  "source": {
+    "document_id": "fmevBcC9JVXK",
+    "table_id": "PACA"
+  },
+  "key_columns": ["Code_INSEE"],
+  "sync_columns": ["Code_INSEE", "Nom", "Departement", "Academie"],
+  "batch_size": 100,
+  "max_changes_per_destination": 20000,
+  "destinations": [
+    {"name": "Projet_TNE", "document_id": "REMPLACER_PAR_ID_DOCUMENT_TNE", "table_id": "PACA", "enabled": false},
+    {"name": "Projet_ENT", "document_id": "REMPLACER_PAR_ID_DOCUMENT_ENT", "table_id": "PACA", "enabled": false}
+  ]
+}
